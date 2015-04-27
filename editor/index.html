@@ -67,6 +67,7 @@ doc.text('And here is some wrapped text...', 100, 300)
         sender: 'editor|cli'},
         exec: function(env, args, request) {
           var code = editor.getSession().getValue();
+          localStorage.setItem('code', code)
 
           eval(code);
 
@@ -104,6 +105,10 @@ doc.text('And here is some wrapped text...', 100, 300)
         }
       }
     );
+
+    if (localStorage.getItem('code')) {
+      editor.getSession().setValue(localStorage.getItem('code'))
+    }
 
     // http://stackoverflow.com/questions/12092633/pdf-js-rendering-a-pdf-file-using-a-base64-file-source-instead-of-url
     var BASE64_MARKER = ';base64,';
