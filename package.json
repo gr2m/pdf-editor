@@ -10,7 +10,8 @@
     "test": "exit 0"
   },
   "gh-pages-deploy": {
-    "staticpath": "dist"
+    "staticpath": "dist",
+    "noprompt": true
   },
   "repository": {
     "type": "git",
