@@ -13,7 +13,7 @@
 </head>
 <body>
 <div id="editor">
-// create a document and pipe to a blob
+// Press Ctrl-S / Command-S to render
 var doc = new PDFDocument();
 var stream = doc.pipe(blobStream());
 
@@ -74,10 +74,9 @@ doc.text('And here is some wrapped text...', 100, 300)
           // end and display the document in the iframe to the right
           doc.end();
           stream.on('finish', function() {
-            dataurl = stream.toBlobURL('application/pdf');
+            var blob = stream.toBlobURL('application/pdf');
 
-            // convertDataURIToBinary(dataurl)
-            PDFJS.getDocument(dataurl).then(function(pdf) {
+            PDFJS.getDocument(blob).then(function(pdf) {
               pdf.getPage(1).then(function(page) {
                   var scale = 1;
                   var viewport = page.getViewport(scale);
