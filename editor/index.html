@@ -15,7 +15,6 @@
 <div id="editor">
 // Press Ctrl-S / Command-S to render
 var doc = new PDFDocument();
-var stream = doc.pipe(blobStream());
 
 // draw some text
 doc.fontSize(25)
@@ -70,8 +69,10 @@ doc.text('And here is some wrapped text...', 100, 300)
           var code = editor.getSession().getValue();
 
           eval(code);
+
           // doc is now available.
           // end and display the document in the iframe to the right
+          var stream = doc.pipe(blobStream());
           doc.end();
           stream.on('finish', function() {
             var blob = stream.toBlobURL('application/pdf');
