@@ -32,7 +32,8 @@
   "dependencies": {
     "blob-stream": "^0.1.3",
     "pdf.js": "^0.1.0",
-    "pdfkit": "^0.7.1"
+    "pdfkit": "^0.7.1",
+    "pdfmake-mini": "git://github.com/gr2m/pdfmake-mini.git"
   },
   "devDependencies": {
     "beefy": "^2.1.5",
