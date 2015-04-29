@@ -20,6 +20,8 @@ var docContent = { content: 'This is an sample PDF printed with pdfMake' };
 docContent.defaultStyle = {
     fontSize: 12, font: 'Helvetica'
 }
+
+var doc = printer.createPdfKitDocument(docContent)
 </div>
   <canvas id="preview"></canvas>
 
