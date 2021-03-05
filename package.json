@@ -13,10 +13,7 @@
     "staticpath": "dist",
     "noprompt": true
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/gr2m/pdf-editor.git"
-  },
+  "repository": "github:gr2m/pdf-editor",
   "keywords": [
     "pdf",
     "editor",
@@ -25,10 +22,6 @@
   ],
   "author": "Gregor Martynus <gregor@martynus.net>",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/gr2m/pdf-editor/issues"
-  },
-  "homepage": "https://github.com/gr2m/pdf-editor",
   "dependencies": {
     "blob-stream": "^0.1.3",
     "pdf.js": "^0.1.0",
