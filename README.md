@@ -3,7 +3,7 @@
 > Editor to generate PDFs in browsers, plugin-free
 
 ```
-git clone git@github.com:gr2m/pdf-editor.git
+git clone https://github.com/gr2m/pdf-editor.git
 cd pdf-editor
 npm install
 npm start
